@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors (DevToolsVersion)</title>
+    <title>Rock Paper Scissors (ConsoleVersion)</title>
 </head>
 <body>
 
@@ -36,6 +36,19 @@
         }
         // Funktion getComputerChoice aufrufen
         getComputerChoice();
+
+
+        //CREATE function getHumanChoice
+        function getHumanChoice() {
+        //PROMPT for variable x with request to enter "Enter Rock, Paper or Scissors"
+        let x = prompt("Enter Rock, Paper or Scissors", "");
+        //CONTROL with console.log
+        console.log(x)
+        }
+        //CALL function getHumanChoice()
+        getHumanChoice()
+        //DISREGARD if user enters invalid input
+        //FOR NOW case-sensitive input
        
     </script>
 
