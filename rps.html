@@ -12,6 +12,31 @@
 
     <script>
         console.log("Hello")
+
+        //CREATE function getComputerChoice
+        function getComputerChoice() {
+        // CREATE variable choice becomes Math.random
+        let choice = Math.random();
+        // CREATE variable result 
+        let result;
+        //ADD if-structure with Math.random(lower than 0.333) PRINT "Rock"
+        if (choice < 0.333) {
+            result = "Rock";
+            }
+        //ADD else if Math.random(bigger or equal to 0.333 and lower than 0.666) PRINT "Paper"
+            else if (choice >= 0.333 && choice < 0.666) {
+                result = "Paper";
+        //ADD else Math.random() Print "Scissors"
+            }
+            else {
+                result = "Scissors";
+            }
+        //CHECK with console.log()
+            console.log(result)
+        }
+        // Funktion getComputerChoice aufrufen
+        getComputerChoice();
+       
     </script>
 
 
