@@ -54,12 +54,16 @@
         }
         //DISREGARD if user enters invalid input
 
-        let humanScore = 0;
-        let computerScore = 0;
+       
 
         //CREATE function playRound
         //DEFINE two parameters for playRound: humanChoice and computerChoice
         //Use these two arguments to take the human and computer choices as arguments
+    function playGame() {
+        
+        let humanScore = 0;
+        let computerScore = 0;
+
         function playRound(humanChoice, computerChoice){
         //How can I get humanChoice and computerChoice comparable? If-clauses?
         //Write Code in Function
@@ -90,16 +94,20 @@
                 alert("No choice input. CPU wins by default.")
             }
             alert (`You: ${humanScore} | CPU:  ${computerScore}`)
-    }
-    //CALL function getComputerChoice 
-    let computerChoice = getComputerChoice();
-    //CALL function getHumanChoice()
-    let humanChoice = getHumanChoice();
-    playRound(humanChoice,computerChoice)
-        
+            }
 
-       
-    </script>
+        let r = 1; 
+        while (r <= 5) {
+        playRound(getHumanChoice(), getComputerChoice())
+        r++
+        }
+    }  
+
+
+
+playGame()
+
+</script>
 
 
 </body>
