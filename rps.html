@@ -68,9 +68,9 @@
         //How can I get humanChoice and computerChoice comparable? If-clauses?
         //Write Code in Function
             if (humanChoice === "rock" && computerChoice === "paper") {
-        //Increment the humanScore or computerScore based on the round winner. For-Loop?
+        //INCREMENT the humanScore or computerScore based on the round winner. For-Loop?
                 computerScore++;
-        //Create String in console.log presenting the Winner "You won! etc."
+        //OUTPUT String in console.log presenting the Winner "You won! etc."
                 alert ("CPU wins! Paper beats rock.")
             } else if (humanChoice === "scissors" && computerChoice === "paper") {
                 humanScore++;
@@ -93,17 +93,35 @@
                 computerScore++
                 alert("No choice input. CPU wins by default.")
             }
+        //PRINT score to user
             alert (`You: ${humanScore} | CPU:  ${computerScore}`)
             }
 
+    //CREATE while loop 
+    // SET to 5 times 
+    // DECLARE r
         let r = 1; 
         while (r <= 5) {
         playRound(getHumanChoice(), getComputerChoice())
         r++
         }
+
+
+    //CREATE function to compare score
+        function compareScores() {
+            if (humanScore > computerScore) {
+    //PRINT Final Score           
+                alert(`Final Score\nYou: ${humanScore} | CPU: ${computerScore}\nYay, you won!`)
+            } else if (humanScore < computerScore) {
+                alert(`Final Score\nYou: ${humanScore} | CPU: ${computerScore}\nL, you loose :-(`)
+            } else if (humanScore === computerScore) {
+                alert(`Final Score\nYou: ${humanScore} | CPU: ${computerScore}\nTIE! Boring...`)
+            }
+        }
+    
+        compareScores()
+
     }  
-
-
 
 playGame()
 
